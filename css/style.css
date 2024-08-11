@@ -370,6 +370,7 @@ img{
 
 .portfolio-cards-list{
     width: ((100% - 2*24px) / 3);
+    box-shadow:  box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 
 .portfolio-cards-list:hover .portfolio-overlay{
@@ -390,9 +391,7 @@ img{
     width: 100%;
     padding: 40px 32px;
     transform: translateY(100%);
-    transition-property: transform, box-shadow;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
@@ -481,4 +480,20 @@ img{
     gap: 16px;
 }
 
+.social-media-footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #4d5ae5;
+    max-width: ((100% - 3*24px) / 4);
+    transition-property: background-color;
+    transition-duration:  250ms;
+    transition-timing-function:  cubic-bezier(0.4, 0, 0.2, 1);
+}
 
+.social-media-footer:hover, .social-media-footer:focus{
+    background-color: #31d0aa;
+}
