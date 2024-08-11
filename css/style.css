@@ -30,7 +30,7 @@ img{
 /* Header */
 
 .header{
-    border: 1px solid #e7e9fc
+    border-bottom: 1px solid #e7e9fc
 }
 
 .page-container{
@@ -74,7 +74,10 @@ img{
 
 }
 
+
+
 .navigation-item{
+    position: relative;
     padding: 24px 0;
     display: block;
     font-weight: 500;
@@ -83,6 +86,22 @@ img{
     letter-spacing: 0.02em;
     color: #2e2f42;
 }
+
+.active-page{
+    color: #404bbf;
+}
+
+.active-page::after{
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 48px;
+    height: 4px;
+    background-color: #404bbf;
+    border-radius: 2px;
+}
+
 
 .navigation-item:hover, .navigation-item:focus{
     color: #404bbf;
@@ -118,6 +137,10 @@ img{
 .section-intro{
     background-color: #2e2f42;
     padding: 188px 0;
+    background-image: linear-gradient( rgba(46, 47, 66, 0.7),  rgba(46, 47, 66, 0.7)), url(../images/people-office.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover, 1440 cover;
 }
 
 .page-title{
@@ -172,13 +195,14 @@ img{
     line-height: 1.11;
     letter-spacing: 0.02em;
     text-align: center;
-    color: #2e2f42;
+    color: #2e2f42
 }
 
 /* Info content */
 
 .benefits-section{
     padding: 120px 0;
+    margin: 0 auto;
 }
 
 .visually-hidden {
@@ -197,11 +221,29 @@ img{
 .benefits-list{
     display: flex;
     gap: 24px;
-    
+}
+
+.benefits-icon-field{
+    border: 1px solid #8e8f99;
+        border-radius: 4px;
+        width: 264px;
+        height: 112px;
+        background-color: #f4f4fd;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 }
 
 .benefits-item{
     width: calc((100% - 24px*3) / 4);
+}
+
+.benefits-icon{
+    border: 1px solid #8e8f99;
+    border-radius: 4px;
+    width: 264px;
+    height: 112px;
+    background-color: #f4f4fd;
 }
 
 .benefits{
@@ -235,8 +277,6 @@ img{
 .team-list{
     display: flex;
     gap: 24px;
-    
-
 }
 
 .card-info{
@@ -247,6 +287,7 @@ img{
     background-color: #FFFFFF;
     width: calc((100%-72px) / 4);
     border-radius: 0px 0px 4px 4px;
+    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
 
 .team-member{
@@ -266,6 +307,38 @@ img{
     letter-spacing: 0.02em;
     text-align: center;
     color: #434455; 
+}
+
+.icons-list{
+    display: flex;
+    margin-left: 16px;
+    margin-top: 8px;
+    margin-right: 16px;
+    margin-bottom: 32px;
+    gap: 24px;
+}
+
+
+.social-media-icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #4d5ae5;
+    max-width: ((100% - 3*24px) / 4);
+    transition-property: background-color;
+    transition-duration:  250ms;
+    transition-timing-function:  cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-media-icons:hover, .social-media-icons:focus{
+    background-color: #31D0AA;
+}
+
+.card-icon{
+    fill: #f4f4fd;
 }
 
 /* Portfolio */
@@ -289,6 +362,34 @@ img{
 
 .portfolio-cards-list{
     width: ((100% - 2*24px) / 3);
+}
+
+.portfolio-cards-list:hover .portfolio-overlay{
+    transform: translateY(0);
+}
+
+.img-overlay{
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    padding: 40px 32px;
+    transform: translateY(100%);
+    transition-property: transform;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #f4f4fd;
+    background-color: #4d5ae5;
 }
 
 .cards-container{
@@ -321,6 +422,10 @@ img{
     background-color: #2e2f42;
 }
 
+.footer-container{
+    display: flex;
+}
+
 .footer-logo{
     display: inline-block;
     margin-bottom: 16px;
@@ -346,3 +451,23 @@ img{
     letter-spacing: 0.02em;
     color: #f4f4fd;
 }
+
+.footer-list-title{
+    margin-bottom: 16px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #fff;
+}
+
+.footer-list-wrap{
+    margin-left: 120px;
+}
+
+.footer-icons-list{
+    display: flex;
+    gap: 16px;
+}
+
+
