@@ -288,6 +288,7 @@ img{
 
 .card-info{
     margin: 0 auto;
+    padding: 32px 0;
 }
 .list-item{
     background-color: #FFFFFF;
@@ -322,7 +323,6 @@ img{
     margin-left: 16px;
     margin-top: 8px;
     margin-right: 16px;
-    margin-bottom: 32px;
     gap: 24px;
 }
 
@@ -342,7 +342,7 @@ img{
 }
 
 .social-media:hover, .social-media:focus{
-    background-color: #31D0AA;
+    background-color: #404bbf;
 }
 
 .card-icon{
@@ -433,7 +433,13 @@ img{
 
 .footer-container{
     display: flex;
+    align-items: baseline;
 }
+
+.footer-content{
+    margin-right: 120px;
+}
+
 
 .footer-logo{
     display: inline-block;
@@ -467,11 +473,7 @@ img{
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
-    color: #fff;
-}
-
-.footer-list-wrap{
-    margin-left: 120px;
+    color: #FFFFFF ;
 }
 
 .footer-icons-list{
