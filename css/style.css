@@ -30,7 +30,8 @@ img{
 /* Header */
 
 .header{
-    border-bottom: 1px solid #e7e9fc
+    border-bottom: 1px solid #e7e9fc;
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .page-container{
@@ -85,6 +86,7 @@ img{
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #2e2f42;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .active-page{
@@ -95,7 +97,7 @@ img{
     content: "";
     display: block;
     position: absolute;
-    bottom: 0;
+    bottom: -1px;
     width: 48px;
     height: 4px;
     background-color: #404bbf;
@@ -125,6 +127,7 @@ img{
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #434455;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts:hover, .contacts:focus{
@@ -137,10 +140,12 @@ img{
 .section-intro{
     background-color: #2e2f42;
     padding: 188px 0;
-    background-image: linear-gradient( rgba(46, 47, 66, 0.7),  rgba(46, 47, 66, 0.7)), url(../images/people-office.png);
+    max-width: 1440px;
+    margin: 0 auto;
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office.png);
     background-position: center center;
     background-repeat: no-repeat;
-    background-size: cover, 1440 cover;
+    background-size: cover;
 }
 
 .page-title{
@@ -167,6 +172,7 @@ img{
     border-radius: 4px;
     padding: 16px 32px;
     min-width: 169px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     border: none;
     border-radius: 4px;
     margin: 0 auto;
@@ -228,6 +234,7 @@ img{
         border-radius: 4px;
         width: 264px;
         height: 112px;
+        margin-bottom: 8px;
         background-color: #f4f4fd;
         display: flex;
         justify-content: center;
@@ -280,7 +287,6 @@ img{
 }
 
 .card-info{
-    padding: 32px 0;
     margin: 0 auto;
 }
 .list-item{
@@ -291,6 +297,7 @@ img{
 }
 
 .team-member{
+    margin-top: 32px;
    margin-bottom: 8px;
     font-weight: 500;
     font-size: 20px;
@@ -311,6 +318,7 @@ img{
 
 .icons-list{
     display: flex;
+    justify-content: center;
     margin-left: 16px;
     margin-top: 8px;
     margin-right: 16px;
@@ -319,7 +327,7 @@ img{
 }
 
 
-.social-media-icons{
+.social-media{
     display: flex;
     justify-content: center;
     align-items: center;
